@@ -2,10 +2,21 @@ import React, { useEffect, useState } from 'react';
 
 import { Box, Stack, Typography, Button, TextField } from '@mui/material';
 
+import { exerciseOptions, fetchData } from '../utils/fetchData';
+
 const SearchExercises = () => {
   const [search, setSearch] = useState('');
 
-  const handleSearch = async () => {};
+  const handleSearch = async () => {
+    if (search) {
+      const exercisesData = await fetchData(
+        'http://exercisedb.p.rapidapi.com',
+        exerciseOptions
+      );
+      console.log(exercisesData);
+    }
+    console.log('click');
+  };
 
   return (
     <Stack
@@ -51,6 +62,7 @@ const SearchExercises = () => {
             position: 'absolute',
             right: 0,
           }}
+          onClick={handleSearch}
         >
           Search
         </Button>

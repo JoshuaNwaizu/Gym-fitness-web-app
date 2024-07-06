@@ -1,4 +1,4 @@
-const fetchData = async (url, options) => {
+export const fetchData = async (url, options) => {
   const response = await fetch(url, options);
 
   const data = await response.json();
@@ -6,13 +6,12 @@ const fetchData = async (url, options) => {
   return data;
 };
 
-const options = {
+export const exerciseOptions = {
   method: 'GET',
   hostname: 'exercisedb.p.rapidapi.com',
-  port: null,
-  //   path: '/exercises/bodyPartList',
+
   headers: {
-    'x-rapidapi-key': process.env.REACT_APP_RAPID_KEY,
+    'x-rapidapi-key': 'c3a5206790mshadb3cd41141e9d7p133105jsne7b857ef27da',
     'x-rapidapi-host': 'exercisedb.p.rapidapi.com',
   },
 };
