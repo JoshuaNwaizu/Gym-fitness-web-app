@@ -8,7 +8,6 @@ export const fetchData = async (url, options) => {
 
 export const exerciseOptions = {
   method: 'GET',
-  hostname: 'exercisedb.p.rapidapi.com',
 
   headers: {
     'x-rapidapi-key': 'c3a5206790mshadb3cd41141e9d7p133105jsne7b857ef27da',
